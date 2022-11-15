@@ -1,0 +1,48 @@
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+alias lint='bin/lint -g origin/master'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias ls='ls -G'
+alias gs='git status'
+alias gc='git checkout'
+alias gcm='git checkout origin/master'
+alias glo='git log --pretty=oneline'
+alias gpush='git push origin'
+alias gpull='git pull origin '
+alias gfo='git fetch origin'
+alias reload_shell='source ~/.zshrc'
+alias rrc='rubocop -f simple -DSP'
+alias raket='RUBYOPT=W0 rake test'
+alias rake='bundle exec rake'
+alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+alias kctx='kubectx'
+alias kpods='kubectl get pods -o wide'
+alias k_console_ops='kubectl exec -n console -it $(get_console_ops_box) -- /bin/bash'
+alias k_pm_ops='kubectl exec -n fellowship-of-the-coin -it $(get_pm_ops_box) -- /bin/bash'
+alias k_ls_ops='kubectl exec -n fellowship-of-the-coin -it $(get_ls_ops_box) -- /bin/bash'
+alias k_console='kubectl config set-context --current --namespace=console'
+alias k_fotc='kubectl config set-context --current --namespace=fellowship-of-the-coin'
+alias k='kubectl'
+alias mvn='./mvnw'
+alias mvnb='./mvnw clean install'
+alias terraformat='cd iac/terraform && terraform fmt -recursive && tflint env && cd -'
+# Teleport
+alias tlogin='tsh login --proxy=teleport.wezatele.awsmmcn.private:443'
+alias tldev='tsh login teleport.eu-dev.awsmmcn.private'
+alias tlstg='tsh login teleport.eu-staging.awsmmcn.private'
+alias tlprod='tsh login teleport.eu-prod.awsmmcn.private'
+alias tkls='tsh kube ls'
+alias tkldev='tsh kube login dev-eu-aug22'
+alias tklstg='tsh kube login staging-eu-aug22'
+alias tklprod='tsh kube login production-eu-aug22'
+alias tdbls='tsh db ls'
+alias tldbdev='tsh db login --db-user=iam_user --db-name=alf console-dev-cluster'
+alias tpdbdev='tsh proxy db -p 3080 console-dev-cluster'
+alias tldbstg='tsh db login --db-user=iam_user --db-name=alf_staging eng-console-staging-cluster'
+alias tpdbstg='tsh proxy db -p 3081 eng-console-staging-cluster'
+alias tldbprod='tsh db login --db-user=iam_user --db-name=alf eng-console-production-cluster-reader'
+alias tpdbprod='tsh proxy db -p 3083 eng-console-production-cluster-reader'alias dotfiles='/usr/bin/git --git-dir=/Users/martinleepan/.dotfiles/ --work-tree=/Users/martinleepan'

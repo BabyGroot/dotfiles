@@ -20,11 +20,11 @@ tunnel_console_prod_db() {
 }
 
 get_console_ops_box() {
-  kubectl get pods -n console --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}' | grep eng-console-ops-ops-standby
+  kubectl get pods -n console --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}' | grep eng-console-ops-standby
 }
 
 get_pm_ops_box() {
-  kubectl get pods -n fellowship-of-the-coin --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}' | grep eng-payment-mediator-ops-ops-standby
+  kubectl get pods -n fellowship-of-the-coin --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}' | grep eng-payment-mediator-ops-standby
 }
 
 get_ls_ops_box() {

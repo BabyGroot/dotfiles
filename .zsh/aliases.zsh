@@ -17,8 +17,6 @@ alias reload_shell='source ~/.zshrc'
 alias rrc='rubocop -f simple -DSP'
 alias raket='RUBYOPT=W0 rake test'
 alias rake='bundle exec rake'
-alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
-alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 alias kctx='kubectx'
 alias kpods='kubectl get pods -o wide'
 alias k_console_ops='kubectl exec -n console -it $(get_console_ops_box) -- /bin/bash'
@@ -46,4 +44,4 @@ alias tldbstg='tsh db login --db-user=iam_user --db-name=alf_staging eng-console
 alias tpdbstg='tsh proxy db -p 3081 eng-console-staging-cluster'
 alias tldbprod='tsh db login --db-user=iam_user --db-name=alf eng-console-production-cluster-reader'
 alias tpdbprod='tsh proxy db -p 3083 eng-console-production-cluster-reader'
-alias dotfiles='/usr/bin/git --git-dir=/Users/martinleepan/.dotfiles/ --work-tree=/Users/martinleepan'
+alias dotfiles='/usr/bin/git --git-dir=/Users/martinleepan/.dotfiles/ --work-tree=/Users/indiecampers'

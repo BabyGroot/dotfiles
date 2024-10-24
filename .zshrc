@@ -7,17 +7,16 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH";
 export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib":
 export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include"
-export PATH="/Users/leandromaciel/.asdf/shims:$PATH";
-export PATH="/opt/homebrew/opt/openssl@1.0/bin:$PATH"
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
 export PATH="$HOME/.rbenv/bin:$PATH"
+export STARSHIP_CONFIG="$HOME/.zsh/starship.toml"
 
 eval "$(rbenv init -)"
 
 fpath=(~/zsh-completions/src $fpath)
 
 
-plugins=( 
+plugins=(
     # other plugins...
     zsh-autosuggestions
 )
@@ -34,3 +33,7 @@ eval "$(starship init zsh)"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

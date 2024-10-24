@@ -8,6 +8,7 @@ $git_branch\
 $git_status\
 [](fg:#394260 bg:#212736)\
 $nodejs\
+$ruby\
 $rust\
 $golang\
 $php\
@@ -42,8 +43,13 @@ symbol = ""
 style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
+[ruby]
+symbol = "💎"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:red bg:#212736)]($style)'
+
 [rust]
-symbol = ""
+symbol = "🦀"
 style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 

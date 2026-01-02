@@ -11,14 +11,15 @@ alias grep='grep --color=always'
 alias gs='git status'
 alias gc='git checkout'
 alias gd='git diff'
-alias gcm='git checkout master'
 alias glo='git log --pretty=oneline'
 alias gpush='git push'
 alias gpull='git pull'
 alias gcom='git commit'
 alias gfo='git fetch origin'
-alias grm='git pull --rebase origin master'
+alias grm='git pull --rebase origin main'
 alias cc='convco commit'
+alias gbl='git branch | grep -v "main" | grep -v "^\*"'
+alias gbclean='git branch | grep -v "main" | grep -v "^\*" | xargs git branch -D'
 
 # Ruby, Rake, Rails and Rubocop
 alias runspec='bundle exec rspec'
@@ -28,6 +29,7 @@ alias copac='rubocop --auto-correct'
 alias rake='bundle exec rake'
 alias rails='bundle exec rails'
 alias rebuild_test_db='rake db:drop db:create db:migrate RAILS_ENV=test'
+alias swaggerize='rake rswag:specs:swaggerize'
 
 # Kubernetes
 alias kctx='kubectx'
@@ -45,6 +47,10 @@ alias mvnb='./mvnw clean install'
 
 # Terraform
 alias tfmt='terraform fmt -recursive'
+alias tf='terraform'
+
+# SSM
+alias ssm_redactor='aws ssm start-session --target "i-0595f1e0fed6b5c1b" --region "eu-west-1"'
 
 # Teleport
 alias tlogin='tsh login --proxy=teleport.wezatele.awsmmcn.private:443'
